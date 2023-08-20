@@ -1,71 +1,22 @@
+//! Issue
 //! ["Salam"] -->  "Slm"
 
-function removeVowels(){
+// Main Arrays
+const vowels = ["a", "e", "i", "o", "u"];
+const arr = ["Salam"];
 
-    // Main Arrays
-    const vowels = ["a", "e", "i", "o", "u"];
-    const hi = ["Salam"];
+// Variables
+let strArr = arr.toString().split("");
+let strVowels = vowels.toString();
+let resArr = [];
 
-    // Main Variables
-    let res = [];
-    let arr = "";
-
-    // Loop
-    for(let i=0; i<vowels.length; i++){
-        arr += vowels[i];
+// Loop
+for(val of strArr){
+    if(!strVowels.includes(val)){
+        resArr.push(val);
     }
-
-    if(arr.includes(hi.toString())){
-        res.push(arr);
-    }
-
-    console.log(res.toString());
 }
 
+let res = resArr.toString();
 
-removeVowels();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// includes();
-
-// let arr = [];
-// let brr = ["as", "bs", "cs"];
-// let crr = "hjk";
-
-// let res = "";
-// for (let i = 0; i < brr.length; i++) {
-//   res += brr[i];
-// }
-
-// if (!crr.includes(res)) {
-//   arr.push(res);
-// }
-
-// console.log(arr);
+console.log(res);
